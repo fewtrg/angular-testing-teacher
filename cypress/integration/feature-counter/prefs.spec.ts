@@ -28,7 +28,7 @@ describe('counter preferences', () => {
     });
   });
   describe('changing prefs to 3', () => {
-    it('should change the button to disabled and enable the one', () => {
+    it('when changing count by it increments / decrements by that value', () => {
       cy.get('[data-counter-prefs]')
         .get('button')
         .contains('3')
@@ -41,6 +41,7 @@ describe('counter preferences', () => {
         // .click() duh!
         .should('be.enabled');
 
+      // give the thing you are going to refer to in your tests a data-test-id
       cy.get('.nav-link').contains('Rad Counting').click();
 
       cy.get('[data-counter-prefs]').should('not.exist');
