@@ -23,3 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('clickNavigationLinkTo', (linkText: string) => {
+  cy.get(`[data-front-end-navigation]`).contains(linkText).click();
+});

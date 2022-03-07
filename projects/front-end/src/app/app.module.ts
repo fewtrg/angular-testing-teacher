@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { EnvironmentModule } from 'shared';
+import { EnvironmentModule } from 'shared'; // in a library that is in this project
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
