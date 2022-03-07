@@ -42,5 +42,5 @@ export const selectResetDisabled = createSelector(
 export const selectDecrementDisabled = createSelector(
   selectCountingBy,
   selectCounterCurrent,
-  (by, current) => by - current >= 0
+  (by, current) => by - current > 0
 );
